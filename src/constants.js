@@ -189,8 +189,8 @@ import schoolLogo from './assets/education_logo/myschool-logo.png';
        "A frontend e-commerce website inspired by Myntra, developed using HTML, CSS, and JavaScript. The platform replicates core shopping features with product listings, category sections, discounts, and a clean responsive design, offering users a realistic online shopping experience.",
       image: ecommerceLogo,
       tags: ["HTML", "CSS", "JavaScript","Figma"],
-      github: "https://github.com/codingmastr/CSPrep",
-      webapp: "https://csprep.netlify.app/",
+      github: "https://github.com/arunkumarsingh-20/myntra-clone",
+      webapp: "https://myntraclone-8iv.pages.dev/",
     },
     {
       id: 2,
