@@ -147,7 +147,7 @@ import schoolLogo from './assets/education_logo/myschool-logo.png';
       school: "National Institute of Technology Delhi, Delhi",
       date: "Nov 2022 - Present",
       grade: "7.1 CGPA",
-      desc: "I am pursuing a B.Tech in Electronics and Communication Engineering at NIT Delhi, where I’ve built a strong foundation in core electronics and computer science subjects like DSA, Algorithms, and Web Development. Alongside academics, I have worked on technical projects that enhanced my problem-solving skills, technical expertise, and overall professional growth.",
+      desc: "I am pursuing B.Tech in Electronics and Communication Engineering at NIT Delhi, where I’ve built a strong foundation in core electronics and computer science subjects like DSA, Algorithms, and Web Development. Alongside academics, I have worked on technical projects that enhanced my problem-solving skills, technical expertise, and overall professional growth.",
       degree: "B.Tech, Electronics and Communication Engineering",
     },
     {
