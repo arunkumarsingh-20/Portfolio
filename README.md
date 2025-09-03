@@ -4,7 +4,7 @@ A sleek, responsive, and fully customizable animated portfolio website built usi
 
 🚀 Live Demo
 
-🔗 View Portfolio Live 
+🔗 View Portfolio Live https://portfolio-arunkumarsingh.vercel.app/
 
 🛠️ Tech Stack
 
@@ -44,7 +44,7 @@ npm install
 ### 3. Run the App
 
 ```bash
-npm start
+npm run dev
 ```
 
 ### 4. Build for Production
@@ -55,5 +55,5 @@ npm run build
 
 ## 🌟 Credits
 
-This project was created with ❤️ by [Arun Kumar Singh](https://tarunkaushik.vercel.app/).
+This project was created with ❤️ by [Arun Kumar Singh](https://portfolio-arunkumarsingh.vercel.app/).
 If you like it, feel free to ⭐ this repository and share!
