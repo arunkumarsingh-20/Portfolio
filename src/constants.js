@@ -22,10 +22,15 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 
-// Experience Section Logo's
-import webverseLogo from './assets/company_logo/webverse_logo.png';
-import agcLogo from './assets/company_logo/agc_logo.png';
-import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+
+  // Project Section Logo's
+import careerCoachLogo from './assets/work_logo/sensi-ai-logo.png';
+import spotifyLogo from './assets/work_logo/spotify-logo.png';
+import netflixLogo from './assets/work_logo/netflix-image.png';
+import ecommerceLogo from './assets/work_logo/ecommerce-logo.png';
+import tomatoLogo from './assets/work_logo/tomato-app-logo.png';
+import eduQuestLogo from './assets/work_logo/Ecommerce-front.png';
+
 
 
 
@@ -75,61 +80,61 @@ export const SkillsInfo = [
   },
 ];
 
-  export const experiences = [
-    {
-      id: 0,
-      img: webverseLogo,
-      role: "Fullstack Developer",
-      company: "Webverse Digital",
-      date: "April 2024 - Present",
-      desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-      skills: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React JS",
-        "TypeScript",
-        "Node JS",
-        "Tailwind CSS",
-        "MongoDb",
-        "Redux",
-        " Next Js",
-      ],
-    },
-    {
-      id: 1,
-      img: agcLogo,
-      role: "Fullstack Engineer",
-      company: "Agumentik Group of Companies",
-      date: "July 2023 - March 2024",
-      desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-      skills: [
-        "ReactJS",
-        "Redux",
-        "JavaScript",
-        "Tailwind CSS",
-        "HTML",
-        "CSS",
-        "SQL",
-      ],
-    },
-    {
-      id: 2,
-      img: newtonschoolLogo,
-      role: "Frontend Intern",
-      company: "Newton School",
-      date: "September 2021 - August 2022",
-      desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
-      skills: [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Bootstrap",
-        "Figma",
-        "Material UI",
-      ],
-    },
-  ];
+  // export const experiences = [
+  //   {
+  //     id: 0,
+  //     img: webverseLogo,
+  //     role: "Fullstack Developer",
+  //     company: "Webverse Digital",
+  //     date: "April 2024 - Present",
+  //     desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
+  //     skills: [
+  //       "HTML",
+  //       "CSS",
+  //       "JavaScript",
+  //       "React JS",
+  //       "TypeScript",
+  //       "Node JS",
+  //       "Tailwind CSS",
+  //       "MongoDb",
+  //       "Redux",
+  //       " Next Js",
+  //     ],
+  //   },
+  //   {
+  //     id: 1,
+  //     img: agcLogo,
+  //     role: "Fullstack Engineer",
+  //     company: "Agumentik Group of Companies",
+  //     date: "July 2023 - March 2024",
+  //     desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
+  //     skills: [
+  //       "ReactJS",
+  //       "Redux",
+  //       "JavaScript",
+  //       "Tailwind CSS",
+  //       "HTML",
+  //       "CSS",
+  //       "SQL",
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     img: newtonschoolLogo,
+  //     role: "Frontend Intern",
+  //     company: "Newton School",
+  //     date: "September 2021 - August 2022",
+  //     desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
+  //     skills: [
+  //       "HTML",
+  //       "CSS",
+  //       "Javascript",
+  //       "Bootstrap",
+  //       "Figma",
+  //       "Material UI",
+  //     ],
+  //   },
+  // ];
 
 // Education Section Logo's
 import nitdLogo from './assets/education_logo/nit-delhi-logo.png';
@@ -144,20 +149,10 @@ import schoolLogo from './assets/education_logo/myschool-logo.png';
       grade: "7.1 CGPA",
       desc: "I am pursuing a B.Tech in Electronics and Communication Engineering at NIT Delhi, where I’ve built a strong foundation in core electronics and computer science subjects like DSA, Algorithms, and Web Development. Alongside academics, I have worked on technical projects that enhanced my problem-solving skills, technical expertise, and overall professional growth.",
       degree: "B.Tech, Electronics and Communication Engineering",
-    }
-,
-    // {
-    //   id: 1,
-    //   img: schoolLogo,
-    //   school: "BSA College, Mathura",
-    //   date: "Sept 2018 - Aug 2021",
-    //   grade: "73.2%",
-    //   desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-    //   degree: "Bachelor of Science - BSC (Computer Science)",
-    // },
+    },
     {
       id: 1,
-      img: schoolLogo, // replace with your school logo if available
+      img: schoolLogo,
       school: "St. Augustine Sr. Sec. School, Agra",
       date: "Mar 2021",
       grade: "91.8%",
@@ -174,14 +169,6 @@ import schoolLogo from './assets/education_logo/myschool-logo.png';
       degree: "CBSE(X), Science with Information Technology",
     },
   ];
-
-  // Project Section Logo's
-import careerCoachLogo from './assets/work_logo/sensi-ai-logo.png';
-import spotifyLogo from './assets/work_logo/spotify-logo.png';
-import netflixLogo from './assets/work_logo/netflix-image.png';
-import ecommerceLogo from './assets/work_logo/ecommerce-logo.png';
-import tomatoLogo from './assets/work_logo/tomato-app-logo.png';
-import eduQuestLogo from './assets/work_logo/Ecommerce-front.png';
 
   
   export const projects = [

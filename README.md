@@ -1,32 +1,37 @@
-# 🌐 Animated Portfolio Website
+🌐 Animated Portfolio Website
 
-A sleek, responsive, and fully customizable **animated portfolio website** built using **React.js** and **Tailwind CSS**. This project gained **27K+ views** on [YouTube]([https://youtube.com/your-video-link](https://youtu.be/ypSc8HEurGQ?si=yI3GJCye3sAKoemW)) – loved by developers and students for its modern design and clean code.
+A sleek, responsive, and fully customizable animated portfolio website built using React.js and Tailwind CSS. This project showcases my skills, projects, and experiences in a modern and professional way.
 
-## 🚀 Live Demo
+🚀 Live Demo
 
-🔗 [View Portfolio Live](https://tarunkaushik.vercel.app/)
+🔗 View Portfolio Live 
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
-- ⚛️ React.js
-- 🎨 Tailwind CSS
-- 💾 Vercel(for deployment)
+⚛️ React.js
 
-## 📁 Features
+🎨 Tailwind CSS
 
-- Responsive design for all screen sizes 📱💻
-- Smooth scroll and animation effects ✨
-- Clean and modular React components 🧩
-- Easy to customize with Tailwind utility classes 🎯
-- Professional sections: About, Skills, Projects, Contact, etc. 👨‍💻
+💾 Vercel (for deployment)
 
+📁 Features
+
+Fully responsive design for all devices 📱💻
+
+Smooth animations and transitions ✨
+
+Modular and reusable React components 🧩
+
+Easy customization using Tailwind utility classes 🎯
+
+Professional sections: About, Education, Skills, Projects, Contact 👨‍💻
 
 ## 🧑‍💻 How to Use
 
 ### 1. Clone the Repo
 
 ```bash
-git clone [https://github.com/codingmastr/Tarun-s-Portfolio.git]
+git clone [https://github.com/arunkumarsingh-20/Portfolio.git]
 cd your-repo-name
 ````
 
@@ -48,12 +53,7 @@ npm start
 npm run build
 ```
 
-## 📹 YouTube Tutorial
-
-Watch the full build on YouTube:
-📺 [React Portfolio Website - 27K+ Views](https://youtu.be/ypSc8HEurGQ?si=winjJhc9qzNrCqLD)
-
 ## 🌟 Credits
 
-This project was created with ❤️ by [Tarun Kaushik](https://tarunkaushik.vercel.app/).
+This project was created with ❤️ by [Arun Kumar Singh](https://tarunkaushik.vercel.app/).
 If you like it, feel free to ⭐ this repository and share!
