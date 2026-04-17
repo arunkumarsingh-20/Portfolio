@@ -19,7 +19,9 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
       );
 
       form.current.reset();
@@ -34,17 +36,20 @@ const Contact = () => {
         theme: "dark",
       });
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error("EmailJS error:", error);
 
-      toast.error("Failed to send message. Please try again.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "dark",
-      });
+      toast.error(
+        error?.text || error?.message || "Failed to send message. Please try again.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        }
+      );
     } finally {
       setIsSending(false);
     }
