@@ -1,82 +1,147 @@
-import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
-import Tilt from 'react-parallax-tilt';
-import profileImage from '../../assets/Arun-profile.png';
+import React from "react";
+import ReactTypingEffect from "react-typing-effect";
+import Tilt from "react-parallax-tilt";
+import profileImage from "../../assets/Arun-profile.png";
+import { heroStats, profile } from "../../constants";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="px-[7vw] md:px-[7vw] lg:px-[20vw] py-24 md:py-28 lg:py-32 font-sans"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-        {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
-          </h1>
-          {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Arun
-          </h2>
-          {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
-            <ReactTypingEffect
-              text={[
-                'Fullstack Developer',
-                'Problem Solver',
-                'Competitive Coder',
-                'Tech Explorer'
-              ]}
-              speed={100}
-              eraseSpeed={50}
-              typingDelay={500}
-              eraseDelay={2000}
-              cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
-              )}
-            />
-          </h3>
-          {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 mr-10 leading-relaxed">
-            I'm Arun Kumar Singh, a passionate and curious 4th year B.Tech student at NIT Delhi,
-            specializing in Electronics and Communication Engineering (ECE). I'm deeply interested in 
-            Web Development, Data Structures and Algorithms (DSA), and Technology-Driven Innovation.
-          </p>
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1pjNzXP3mwEGqw3644ZFSgDOpbVlKuJEQ/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
-            }}
-          >
-          RESUME
-          </a>
+      <div className="grid items-stretch gap-12 lg:grid-cols-2">
+        <div className="flex h-full">
+          <div className="flex h-full flex-col justify-center text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.85)]" />
+              Open for internships, freelance work, and collaboration
+            </div>
 
+            <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Hi, I am{" "}
+              <span className="text-gradient">{profile.name}</span>
+            </h1>
+
+            <div className="mt-4 min-h-[4.5rem]">
+              <h2 className="text-xl font-semibold leading-snug text-gray-200 sm:text-2xl lg:text-3xl">
+                <span className="text-white">I build as a </span>
+                <span className="inline-block max-w-full align-middle break-words text-[#8245ec]">
+                  <ReactTypingEffect
+                    text={[
+                      "Full Stack Developer",
+                      "Problem Solver",
+                      "ECE Undergrad at NIT Delhi",
+                      "Web Development Enthusiast",
+                    ]}
+                    speed={80}
+                    eraseSpeed={40}
+                    typingDelay={350}
+                    eraseDelay={1500}
+                    cursorRenderer={(cursor) => (
+                      <span className="text-[#8245ec]">{cursor}</span>
+                    )}
+                  />
+                </span>
+              </h2>
+            </div>
+
+            <p className="mt-6 mx-auto max-w-2xl text-base leading-8 text-gray-400 sm:text-lg lg:mx-0">
+              {profile.summary}
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+              {["React", "Next.js", "Tailwind CSS", "Node.js", "MERN", "DSA"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition hover:border-purple-500/30 hover:bg-white/10"
+                  >
+                    {item}
+                  </span>
+                )
+              )}
+            </div>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+              <a
+                href={profile.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#8245ec] to-[#a855f7] px-8 py-3 text-base font-semibold text-white transition-transform duration-300 hover:scale-105"
+                style={{
+                  boxShadow: "0 0 18px rgba(130,69,236,0.45)",
+                }}
+              >
+                View Resume
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-3 text-base font-semibold text-white transition hover:bg-white/10"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
         </div>
-        {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center ml-12 md:justify-end">
-          <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            <img
-              src={profileImage}
-              alt="Arun Kumar Singh"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
-          </Tilt>
+
+        <div className="flex h-full">
+          <div className="relative flex h-full w-full justify-center lg:justify-end">
+            <div className="absolute -left-6 top-8 h-16 w-16 rounded-full bg-purple-500/20 blur-3xl" />
+            <div className="absolute bottom-8 right-0 h-16 w-16 rounded-full bg-fuchsia-500/15 blur-3xl" />
+
+            <Tilt
+              className="relative flex h-full w-full max-w-[28rem] flex-col rounded-[1.7rem] border border-white/10 bg-white/5 p-2.5 backdrop-blur-md shadow-[0_0_40px_rgba(130,69,236,0.12)]"
+              tiltMaxAngleX={14}
+              tiltMaxAngleY={14}
+              perspective={1000}
+              scale={1.02}
+              transitionSpeed={1000}
+              gyroscope={true}
+            >
+              <div className="flex h-full flex-col gap-2.5">
+                <div className="overflow-hidden rounded-[1.15rem] border border-white/10 bg-[#0d081f] p-2">
+                  <img
+                    src={profileImage}
+                    alt="Arun Kumar Singh"
+                    className="h-[15rem] w-full rounded-[0.9rem] object-cover sm:h-[16rem] lg:h-[17rem]"
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {heroStats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-xl border border-white/10 bg-[#0d081f]/90 p-3 text-left"
+                    >
+                      <p className="text-[10px] uppercase tracking-[0.18em] text-gray-500">
+                        {stat.label}
+                      </p>
+                      <p className="mt-1 text-[17px] font-bold text-white">
+                        {stat.value}
+                      </p>
+                      <p className="mt-1 text-[11px] leading-5 text-gray-400">
+                        {stat.note}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-auto rounded-xl border border-white/10 bg-[#0d081f]/90 p-3">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-gray-500">
+                    Current Focus
+                  </p>
+                  <p className="mt-1.5 text-sm font-semibold leading-6 text-white">
+                    Building polished web experiences with performance, clarity, and modern UI.
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-gray-400">
+                    Location: {profile.location}
+                  </p>
+                </div>
+              </div>
+            </Tilt>
+          </div>
         </div>
       </div>
     </section>

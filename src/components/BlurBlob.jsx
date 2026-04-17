@@ -1,40 +1,40 @@
-// components/BlurBlob.jsx
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const BlurBlob = ({ position, size }) => {
-  // Destructure position and size with default values
-  const { top, left } = position
-  const { width, height } = size 
+const BlurBlob = ({ position, size, color = "bg-purple-500", opacity = "opacity-20" }) => {
+  const { top, left } = position;
+  const { width, height } = size;
 
   return (
     <div
-      className="absolute"
+      className="pointer-events-none absolute -z-10"
       style={{
-        top: top,
-        left: left,
-        width: width,
-        height: height,
-        transform: 'translate(-50%, -50%)',
+        top,
+        left,
+        width,
+        height,
+        transform: "translate(-50%, -50%)",
       }}
+      aria-hidden="true"
     >
       <div
-        className="w-full h-full bg-purple-500 rounded-full opacity-20 blur-3xl animate-blob"
-      ></div>
+        className={`h-full w-full rounded-full blur-3xl ${color} ${opacity}`}
+      />
     </div>
   );
 };
 
-// Define prop types
 BlurBlob.propTypes = {
   position: PropTypes.shape({
-    top: PropTypes.string,
-    left: PropTypes.string,
-  }),
+    top: PropTypes.string.isRequired,
+    left: PropTypes.string.isRequired,
+  }).isRequired,
   size: PropTypes.shape({
-    width: PropTypes.string,
-    height: PropTypes.string,
-  }),
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+  }).isRequired,
+  color: PropTypes.string,
+  opacity: PropTypes.string,
 };
 
 export default BlurBlob;

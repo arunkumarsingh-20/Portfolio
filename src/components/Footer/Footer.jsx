@@ -1,50 +1,43 @@
 import React from "react";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import { SiLeetcode, SiCodechef, SiCodeforces } from "react-icons/si";
+import { profile, socialLinks } from "../../constants";
 
 const Footer = () => {
-  // Smooth scroll function
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const socialItems = [
+    { icon: <FaLinkedin />, link: socialLinks.linkedin, label: "LinkedIn" },
+    { icon: <FaGithub />, link: socialLinks.github, label: "GitHub" },
+    { icon: <FaInstagram />, link: socialLinks.instagram, label: "Instagram" },
+    { icon: <SiLeetcode />, link: socialLinks.leetcode, label: "LeetCode" },
+    { icon: <SiCodechef />, link: socialLinks.codechef, label: "CodeChef" },
+    { icon: <SiCodeforces />, link: socialLinks.codeforces, label: "Codeforces" },
+  ];
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="container mx-auto text-center">
-        {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">Arun Kumar Singh</h2>
+    <footer className="px-[12vw] md:px-[7vw] lg:px-[20vw] py-10 text-white">
+      <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-8 text-center backdrop-blur-md">
+        <h2 className="text-2xl font-semibold text-white">{profile.name}</h2>
+        <p className="mt-2 text-sm text-gray-400">
+          Full Stack Developer | NIT Delhi
+        </p>
 
-
-        {/* Social Media Icons - Responsive */}
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
-          {[
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/arun-kumar-singh-19334a29b/" },
-            { icon: <FaGithub />, link: "https://github.com/arunkumarsingh-20" },
-            { icon: <FaInstagram />, link: "http://instagram.com/_.arun2511/" },
-            { icon: <SiLeetcode />, link: "https://leetcode.com/codewiitharun2513" },
-            { icon: <SiCodechef />, link: "https://www.codechef.com/users/arunsingh2004" },
-            { icon: <SiCodeforces />, link: "https://codeforces.com/profile/arun_7609" },
-
-
-          ].map((item, index) => (
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
+          {socialItems.map((item) => (
             <a
-              key={index}
+              key={item.label}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              aria-label={item.label}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#131025] text-lg text-gray-300 transition hover:-translate-y-1 hover:border-purple-500/40 hover:text-[#8245ec]"
             >
               {item.icon}
             </a>
           ))}
         </div>
 
-        {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
-          © 2025 Arun Kumar Singh. All rights reserved.
+        <p className="mt-6 text-sm text-gray-500">
+          © 2026 {profile.name}. All rights reserved.
         </p>
       </div>
     </footer>
