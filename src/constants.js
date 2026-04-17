@@ -217,7 +217,7 @@ export const projects = [
 
 export const socialLinks = {
   github: "https://github.com/arunkumarsingh-20",
-  linkedin: "https://www.linkedin.com/in/arunkumar-singh-19334a29b/",
+  linkedin: "https://www.linkedin.com/in/arun-kumar-singh-19334a29b/",
   instagram: "http://instagram.com/_.arun2511/",
   leetcode: "https://leetcode.com/codewiitharun2513",
   codechef: "https://www.codechef.com/users/arunsingh",
