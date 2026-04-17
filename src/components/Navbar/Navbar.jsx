@@ -62,7 +62,7 @@ const Navbar = () => {
       <nav
         className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-[#050414]/70 backdrop-blur-xl border-b border-white/8 shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
+            ? "border-b border-white/[0.08] bg-[#050414]/70 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl"
             : "bg-transparent"
         }`}
       >
@@ -73,24 +73,24 @@ const Navbar = () => {
             aria-label="Go to home section"
           >
             <span className="text-[#8245ec] text-2xl">&lt;</span>
-            <span className="text-white text-2xl tracking-tight">
+            <span className="text-2xl tracking-tight text-white">
               {profile.name.split(" ")[0]}
             </span>
             <span className="text-[#8245ec]">/</span>
             <span className="text-[#8245ec] text-2xl">&gt;</span>
           </button>
 
-          <div className="hidden md:flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 backdrop-blur-md">
+          <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 backdrop-blur-md md:flex">
             {menuItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => handleMenuItemClick(item.id)}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? "bg-white/10 text-white"
-                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                      : "text-gray-300 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -99,7 +99,7 @@ const Navbar = () => {
             })}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <a
               href={socialLinks.github}
               target="_blank"
@@ -131,7 +131,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#8245ec]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#8245ec] md:hidden"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -141,9 +141,15 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/55 backdrop-blur-sm md:hidden">
-          <div className="absolute left-1/2 top-20 w-[90%] -translate-x-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#050414]/95 shadow-2xl">
-            <div className="border-b border-white/8 px-5 py-4">
+        <div
+          className="fixed inset-0 z-40 bg-black/55 backdrop-blur-sm md:hidden"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="absolute left-1/2 top-20 w-[90%] -translate-x-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#050414]/95 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="border-b border-white/[0.08] px-5 py-4">
               <p className="text-xs uppercase tracking-[0.3em] text-gray-500">
                 Navigation
               </p>
@@ -161,7 +167,7 @@ const Navbar = () => {
                     onClick={() => handleMenuItemClick(item.id)}
                     className={`flex items-center justify-between rounded-2xl px-4 py-4 text-left text-sm font-medium transition ${
                       isActive
-                        ? "bg-white/8 text-white"
+                        ? "bg-white/[0.08] text-white"
                         : "text-gray-300 hover:bg-white/5 hover:text-white"
                     }`}
                   >
@@ -174,7 +180,7 @@ const Navbar = () => {
               })}
             </div>
 
-            <div className="border-t border-white/8 px-5 py-5">
+            <div className="border-t border-white/[0.08] px-5 py-5">
               <div className="flex items-center gap-3">
                 <a
                   href={socialLinks.github}

@@ -35,9 +35,10 @@ const App = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#050414] text-white">
       <div
-        className="fixed left-0 top-0 z-50 h-1 bg-gradient-to-r from-[#8245ec] via-[#a855f7] to-fuchsia-400 transition-all duration-150"
+        className="fixed left-0 top-0 z-50 h-[3px] bg-gradient-to-r from-[#8245ec] via-[#a855f7] to-fuchsia-400 transition-[width] duration-500 ease-out"
         style={{ width: `${scrollProgress}%` }}
       />
+
 
       <BlurBlob
         position={{ top: "18%", left: "14%" }}

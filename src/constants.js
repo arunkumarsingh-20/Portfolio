@@ -93,7 +93,7 @@ export const SkillsInfo = [
       { name: "MongoDB", logo: mongodbLogo },
       { name: "MySQL", logo: mysqlLogo },
       { name: "PostgreSQL", logo: postgreLogo },
-      { name: "Firebase", logo: firebaseLogo },
+      { name: "Postman", logo: postmanLogo },
     ],
   },
   {
@@ -115,7 +115,6 @@ export const SkillsInfo = [
       { name: "Vercel", logo: vercelLogo },
       { name: "Netlify", logo: netlifyLogo },
       { name: "Figma", logo: figmaLogo },
-      { name: "Postman", logo: postmanLogo },
     ],
   },
 ];
